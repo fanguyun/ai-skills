@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Internal scaffold helper for `npm run new`.
+# Public entrypoint: `npm run new <skill-name>`.
+
 if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
-  echo "用法: $0 <skill-name> [repo-root]" >&2
+  echo "官方入口: npm run new <skill-name>" >&2
+  echo "底层脚本用法: $0 <skill-name> [repo-root]" >&2
+  echo "示例: npm run new image-audit" >&2
   echo "示例: $0 image-audit \$HOME/ai-skills" >&2
   exit 1
 fi
@@ -30,6 +35,9 @@ find "$TARGET_DIR" -type f \( -name 'SKILL.md' -o -name 'README.md' -o -name 'op
 
 echo "已创建 skill 模板: $TARGET_DIR"
 echo "下一步:"
-echo "  1. 编辑 $TARGET_DIR/SKILL.md"
-echo "  2. 补充 references/、scripts/ 或 assets/"
-echo "  3. 运行 $REPO_ROOT/scripts/install-skill.sh $SKILL_NAME $REPO_ROOT"
+echo "  1. 编辑 $TARGET_DIR/SKILL.md 和 $TARGET_DIR/README.md"
+echo "  2. 检查 $TARGET_DIR/agents/openai.yaml 中的 display_name、short_description、policy.allow_implicit_invocation"
+echo "  3. 按需补充 references/、scripts/ 或 assets/"
+echo "  4. 运行: npm run validate $SKILL_NAME"
+echo "  5. 运行: npm run pack $SKILL_NAME"
+echo "  6. 运行: npm run install $SKILL_NAME"

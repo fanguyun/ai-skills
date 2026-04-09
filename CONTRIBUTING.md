@@ -154,7 +154,7 @@ interface:
 ### 1. 用模板创建
 
 ```bash
-./scripts/create-skill.sh <skill-name> <skills-repo>
+npm run new <skill-name>
 ```
 
 ### 2. 编辑 skill 内容
@@ -163,18 +163,18 @@ interface:
 
 - `SKILL.md`
 - `README.md`
+- `agents/openai.yaml` 中的 `display_name`、`short_description`、`policy.allow_implicit_invocation`
 
 按需补充：
 
 - `references/`
 - `scripts/`
 - `assets/`
-- `agents/openai.yaml`
 
 ### 3. 安装到本地
 
 ```bash
-./scripts/install-skill.sh <skill-name> <skills-repo>
+npm run install <skill-name>
 ```
 
 该脚本会把 skill 接入：
@@ -186,7 +186,7 @@ interface:
 ### 4. 检查当前安装状态
 
 ```bash
-./scripts/list-skills.sh
+npm run list
 ```
 
 ### 5. 提交到 GitHub

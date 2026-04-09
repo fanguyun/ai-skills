@@ -71,65 +71,34 @@ This keeps one source copy while allowing multiple tools to consume the same ski
 
 ## Current skills / 当前 skills
 
-- `h5-compat-audit` - H5 compatibility audit for Android 6+, older iPhones, WeChat in-app browsers, and desktop browsers
+| Skill | 用途 |
+|-------|------|
+| `learning-mentor` | 个性化学习方案，学习策略专家角色 |
+| `skill-builder` | 补全兼容 Claude Code + Codex 的跨平台 skill |
+| `h5-compat-audit` | H5 页面兼容性审查（Android 6+、旧 iPhone、微信内浏览器） |
 
-## Local management scripts / 本地管理脚本
+## Scripts / 常用命令
 
-仓库内置了几个常用脚本：
-
-### Create a new skill / 创建新 skill
-
-```bash
-./scripts/create-skill.sh <skill-name> <skills-repo>
-```
-
-示例：
-
-```bash
-./scripts/create-skill.sh image-audit .
-```
-
-### Install a skill / 安装 skill
-
-```bash
-./scripts/install-skill.sh <skill-name> <skills-repo>
-```
-
-这个脚本会自动接到：
-
-- `~/.agents/skills`
-- `~/.codex/skills`
-- `~/.claude/skills`
-
-### Uninstall a skill / 卸载 skill
-
-```bash
-./scripts/uninstall-skill.sh <skill-name>
-```
-
-这个脚本只移除本地软链接，不删除源码目录。
-
-### List installed skills / 查看当前 skill 状态
-
-```bash
-./scripts/list-skills.sh
-```
-
-会分别列出：
-
-- 源码目录中的 skill
-- 公共池中的 skill
-- Codex 已接入的 skill
-- Claude 已接入的 skill
+| 命令 | 作用 |
+|------|------|
+| `npm run new <name>` | 创建新 skill 目录（含模板文件） |
+| `npm run install <name>` | 安装 skill 到本地工具链（`~/.agents/skills`、`~/.codex/skills`、`~/.claude/skills`） |
+| `npm run uninstall <name>` | 卸载 skill（只移除软链接，不删源码） |
+| `npm run list` | 查看所有 skill 的安装状态 |
+| `npm run pack <name>` | 将 skill 打包为 `.skill` 文件（输出到仓库根目录） |
+| `npm run validate <name>` | 验证 skill 目录结构是否合规 |
 
 ## Adding a new skill / 新增 skill
 
-1. Run `./scripts/create-skill.sh <skill-name> <skills-repo>`
-2. Edit `SKILL.md`
-3. Add `references/`, `scripts/`, or `assets/` if needed
-4. Run `./scripts/install-skill.sh <skill-name> <skills-repo>`
-5. Validate with a real task
-6. Commit and push
+官方入口是 `npm run new <skill-name>`。
+
+1. `npm run new <skill-name>`
+2. 编写 `SKILL.md`、`README.md`，按需补充 `references/`、`scripts/`、`assets/`
+3. 检查 `agents/openai.yaml` 中的 `display_name`、`short_description`、`policy.allow_implicit_invocation`
+4. `npm run validate <skill-name>` 检查结构
+5. `npm run pack <skill-name>` 打包
+6. `npm run install <skill-name>` 安装到本地
+7. 用真实任务验证，然后提交
 
 更详细的规范见 `CONTRIBUTING.md`。
 
