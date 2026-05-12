@@ -33,7 +33,7 @@ description: 审查 H5 页面和前端代码在安卓 6+、iPhone 7 之前机型
 - 旧设备支持较弱的 CSS 特性：flex `gap`、`position: sticky`、动态视口单位、`backdrop-filter`、移动端 `100vh`、`env(safe-area-inset-*)`、过度依赖 `aspect-ratio`。
 - 布局与交互问题：底部固定栏、软键盘遮挡、嵌套滚动区、被动滚动处理、iOS 上的 `overflow: scroll`、点击延迟、点击高亮、变换父节点里的 `position: fixed`。
 - 媒体与上传行为：自动播放限制、内联视频、canvas 尺寸上限、EXIF 方向、文件选择与拍照、超大图片的内存压力。
-- 微信特有问题：JS-SDK 就绪时机、分享流程假设、返回和历史行为、外链处理、OAuth 跳转、字体缩放、viewport 怪异行为。
+- 微信特有问题：JS-SDK 就绪时机、分享流程假设、返回和历史行为、外链点击与跳转限制（诱导、下载、中间页）、OAuth 跳转、字体缩放、viewport 怪异行为。
 - 弱设备性能问题：包体过大、动画过重、图片过大、DOM 过多、图表或 canvas 过于耗性能。
 
 ## 检查方式
