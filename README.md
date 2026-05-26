@@ -73,6 +73,7 @@ This keeps one source copy while allowing multiple tools to consume the same ski
 
 | Skill | 用途 |
 |-------|------|
+| `base-guidelines` | 中文全局编码基准，约束写代码、review、重构时的最小变更与验证闭环 |
 | `learning-mentor` | 个性化学习方案，学习策略专家角色 |
 | `skill-builder` | 补全兼容 Claude Code + Codex 的跨平台 skill |
 | `h5-compat-audit` | H5 页面兼容性审查（Android 6+、旧 iPhone、微信内浏览器） |

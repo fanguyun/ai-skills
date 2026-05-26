@@ -25,7 +25,7 @@ ai-skills/
 npm run new <name>
 ```
 
-`/skill-builder` 用于指导 agent 按仓库规范补全跨平台 skill；它不再作为底层脚手架入口。
+`/base-guidelines` 是默认的全局编码基准；处理写代码、review、重构类任务时，优先遵循它。`/skill-builder` 仍用于指导 agent 按仓库规范补全跨平台 skill；它不再作为底层脚手架入口。
 
 ```bash
 # 1. 初始化
@@ -73,6 +73,7 @@ description: 一句话说明做什么、何时触发（中英文均可，影响�
 
 | Skill | 用途 |
 |-------|------|
+| `base-guidelines` | 中文全局编码基准，约束最小变更、显式假设和验证闭环 |
 | `learning-mentor` | 个性化学习方案，学习策略专家角色 |
 | `skill-builder` | 补全跨平台 skill 的工作流 |
 | `h5-compat-audit` | H5 页面兼容性审查 |
