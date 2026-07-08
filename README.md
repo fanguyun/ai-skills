@@ -29,6 +29,7 @@ ai-skills/
 ├── gen-i18n/
 ├── h5-compat-audit/
 ├── learning-mentor/
+├── multi-mental-models/
 ├── skill-builder/
 └── *.skill                   # 打包产物，按需生成
 ```
@@ -64,6 +65,7 @@ ai-skills/
 | `gen-i18n` | `$gen-i18n` | 从 Excel 翻译表生成多语言 JSON 文件，适用于整理、修复和自动化 i18n 资源生成流程。 | `SKILL.md`、`agents/openai.yaml`、`scripts/gen-i18n.js`、`gen-i18n.skill` |
 | `h5-compat-audit` | `$h5-compat-audit` | 审查 H5 页面和前端代码在安卓 6+、旧 iPhone、微信内浏览器和现代桌面浏览器中的兼容性风险。 | `SKILL.md`、`README.md`、`agents/openai.yaml`、`references/` |
 | `learning-mentor` | `$learning-mentor` | 个性化学习导师，用于制定学习计划、快速入门陌生领域和规划学习路径。 | `SKILL.md`、`agents/openai.yaml`、`learning-mentor.skill` |
+| `multi-mental-models` | `$multi-mental-models` | 多元思维模型分析助手，用多学科、多维度模型分析问题并给出结构化建议、风险提醒和行动方案。 | `SKILL.md`、`README.md`、`agents/openai.yaml`、`references/`、`multi-mental-models.skill` |
 | `skill-builder` | `$skill-builder` | 补全同时兼容 Claude Code 和 Codex CLI 的跨平台 skill，整理 `SKILL.md`、`README.md` 和 Codex UI 配置。 | `SKILL.md`、`assets/openai.yaml`、`skill-builder.skill` |
 
 ## 本地安装链路
