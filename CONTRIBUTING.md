@@ -5,7 +5,7 @@
 本仓库的目标是：
 
 - 用一个统一源码仓库维护自研 skills
-- 通过 `~/.agents/skills` 作为本机公共 skill 池
+- 通过 `~/.skills-manager/skills` 作为本机公共 skill 池
 - 再由 Codex、Claude Code 等工具从公共池接入
 
 ## 基本原则
@@ -177,11 +177,13 @@ npm run new <skill-name>
 npm run install <skill-name>
 ```
 
-该脚本会把 skill 接入：
+该脚本通过 `skills-manager-cli` 把 skill 接入：
 
-- `~/.agents/skills`
+- `~/.skills-manager/skills`（本机公共池）
 - `~/.codex/skills`
 - `~/.claude/skills`
+
+> 注：`~/.codex/skills` 与 `~/.claude/skills` 中的条目是指向 `~/.skills-manager/skills` 的软链接，由 skills-manager 维护部署记录；`~/.agents/skills` 属于其他工具（Cline），仓库自身的 skill 不经它中转。
 
 ### 4. 检查当前安装状态
 
@@ -201,7 +203,7 @@ git push
 ## 修改已有 skill 的建议
 
 - 优先在源码目录 `<skills-repo>/<skill-name>` 中修改
-- 不要直接改 `~/.agents/skills`、`~/.codex/skills`、`~/.claude/skills` 中的链接目标外壳
+- 不要直接改 `~/.skills-manager/skills`、`~/.codex/skills`、`~/.claude/skills` 中的链接目标外壳
 - 修改后，可用真实任务快速验证一次
 - 如果新增了脚本，至少执行一次语法检查或最小实测
 

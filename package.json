@@ -8,8 +8,8 @@
     "install": "bash scripts/install-skill.sh",
     "uninstall": "bash scripts/uninstall-skill.sh",
     "list": "bash scripts/list-skills.sh",
-    "pack": "python3 ~/.claude/skills/skill-creator/scripts/package_skill.py",
-    "validate": "python3 ~/.claude/skills/skill-creator/scripts/quick_validate.py"
+    "pack": "python3 ~/.skills-manager/skills/skill-creator/scripts/package_skill.py",
+    "validate": "python3 ~/.skills-manager/skills/skill-creator/scripts/quick_validate.py"
   },
   "author": "",
   "license": "ISC",

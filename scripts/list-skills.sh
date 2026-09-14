@@ -33,7 +33,7 @@ print_group() {
         continue
       fi
     else
-      if ! is_skill_link "$path" ] && [ ! -d "$path" ]; then
+      if ! is_skill_link "$path" && [ ! -d "$path" ]; then
         continue
       fi
     fi
@@ -56,6 +56,9 @@ print_group() {
 }
 
 print_group "源码目录" "$HOME/ai-skills" "source"
-print_group "公共池" "$HOME/.agents/skills" "install"
+print_group "公共池" "$HOME/.skills-manager/skills" "install"
 print_group "Codex" "$HOME/.codex/skills" "install"
 print_group "Claude" "$HOME/.claude/skills" "install"
+
+echo
+echo "提示: 公共池完整清单可执行 skills-manager-cli skills list"
