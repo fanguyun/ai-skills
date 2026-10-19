@@ -2,3 +2,7 @@
 
 # 本地安装的 Python 依赖（browser_cookie3 等）
 .pydeps/
+
+# 一刻相册导出工具的本地调试日志
+yike-*.log
+
