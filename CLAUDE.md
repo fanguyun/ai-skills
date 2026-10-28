@@ -80,7 +80,9 @@ description: 一句话说明做什么、何时触发（中英文均可，影响�
 | `gen-i18n` | 从 Excel 翻译表生成多语言 JSON 文件，适用于整理、修复和自动化 i18n 资源生成流程。 |
 | `git-commit-message` | 基于当前暂存 diff 生成 Git CZ（Conventional Commits）规范提交内容。 |
 | `h5-compat-audit` | 审查 H5 页面和前端代码在安卓 6+、旧 iPhone、微信内浏览器和现代桌面浏览器中的兼容性风险。 |
+| `how-to-live-better` | 照开源书《高性价比人生指南》查条目回答人生决策，按成本与证据等级排序并注明出自第几节第几条。 |
 | `learning-mentor` | 个性化学习导师，用于制定学习计划、快速入门陌生领域和规划学习路径。 |
+| `life-reset-protocol` | 按 Dan Koe《How to fix your entire life in 1 day》主持一天重启：反愿景挖掘、日间打断、愿景与游戏面板合成，AI 只提问不代答。 |
 | `million-dollar-weekend-research` | 基于快速市场验证理念调研项目或创业点子，输出可执行的 Go/调整/停止决策与访谈、外联、预售数据表。 |
 | `multi-mental-models` | 多元思维模型分析助手，用多学科、多维度模型分析问题并给出结构化建议、风险提醒和行动方案。 |
 | `project-security-scan` | 对 Node.js/TypeScript 仓库执行只读的项目安全审计，覆盖生产依赖、业务代码与交付配置风险，并输出含证据与修复建议的报告。 |
